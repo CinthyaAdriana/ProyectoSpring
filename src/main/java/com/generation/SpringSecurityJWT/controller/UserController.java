@@ -23,7 +23,7 @@ public class UserController {
 
     @PostMapping
     public User saveUser(@RequestBody User user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword())); //esta parte es la que realiza la encriptacion 
         return userService.save(user);
     }
 
